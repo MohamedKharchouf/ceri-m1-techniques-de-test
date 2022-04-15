@@ -14,4 +14,4 @@ workflows:
   maven_test:
     jobs:
       - maven/test:
-          command: 'mvn test'
+          command: 'test'
