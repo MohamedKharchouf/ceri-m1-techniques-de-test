@@ -11,7 +11,11 @@ build-and-publish:
             branches:
               only: master
 steps:
-   - run: mvn test
+  - run:
+      name: test
+      command: mvn test
+
+
 workflows:
   maven_test:
     jobs:
