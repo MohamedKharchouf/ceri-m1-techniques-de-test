@@ -10,8 +10,10 @@ build-and-publish:
           filters:
             branches:
               only: master
+steps:
+   - run: mvn test
 workflows:
   maven_test:
     jobs:
       - maven/test:
-          command: 'test'
+          command: '-X Verify'
