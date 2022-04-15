@@ -13,7 +13,7 @@ build-and-publish:
 steps:
   - run:
       name: test
-      command: mvn test
+      command: test
 
 
 workflows:
