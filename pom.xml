@@ -35,7 +35,11 @@
   </dependencies>
 
   <build>
+<<<<<<< HEAD
   		<testSourceDirectory>src/test/java</testSourceDirectory>
+=======
+	  <defaultGoal>install</defaultGoal>
+>>>>>>> branch 'master' of https://github.com/MohamedKharchouf/ceri-m1-techniques-de-test.git
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
