@@ -11,10 +11,10 @@ build-and-publish:
           filters:
             branches:
               only: master
-    upload-to-codecov:
-      jobs:
-        - checkout
-        - codecov/upload    
+      - run:
+          name: Code Coverage
+          command: curl -Os https://uploader.codecov.io/latest/linux/codecov; chmod +x codecov; ./codecov
+  
 steps:
   - run:
       name: test
@@ -26,4 +26,6 @@ workflows:
     jobs:
       - maven/test:
           command: '-X verify'
+      
+
 
