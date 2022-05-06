@@ -11,14 +11,15 @@ build-and-publish:
           filters:
             branches:
               only: master
-      - run:
-          name: Code Coverage
-          command: curl -Os https://uploader.codecov.io/latest/linux/codecov; chmod +x codecov; ./codecov
+
   
 steps:
   - run:
       name: test
       command: test
+  - run:
+    name: Code Coverage
+    command: curl -Os https://uploader.codecov.io/latest/linux/codecov; chmod +x codecov; ./codecov
 
 
 workflows:
