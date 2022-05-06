@@ -21,7 +21,19 @@ steps:
   - codecov/upload:
           file: {{ coverage_report_filepath }}
 
-
+Run-With-Node:
+    docker:
+      - image: circleci/node:10-browsers
+    steps:
+      - checkout
+      - run:
+          name: install and run tests
+          command: |
+            yarn install && yarn test
+      - codecov/upload:
+          file: './coverage/clover.xml'
+          token: a7a5df63-codcov-token-4278vh38
+          
 workflows:
   maven_test:
     jobs:
