@@ -44,9 +44,8 @@ workflows:
     jobs:
       - maven/test:
           command: '-X verify'
-  upload-to-codecov:
+  codecovupload:
     jobs:
-      - node/test:
-          post-steps:
-            - codecov/upload
+      - build-and-test
+      
  
