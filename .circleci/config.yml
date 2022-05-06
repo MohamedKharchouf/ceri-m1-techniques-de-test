@@ -18,8 +18,6 @@ steps:
   - run:
       name: test
       command: test
-  - codecov/upload:
-          file: {{ coverage_report_filepath }}
 
 
 workflows:
