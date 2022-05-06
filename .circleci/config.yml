@@ -11,16 +11,14 @@ build-and-publish:
           filters:
             branches:
               only: master
-    steps:
-      - codecov/upload:
-          file: {{ coverage_report_filepath }}
 
 
 steps:
   - run:
       name: test
       command: test
-  - run:
+  - codecov/upload:
+          file: {{ coverage_report_filepath }}
 
 
 workflows:
