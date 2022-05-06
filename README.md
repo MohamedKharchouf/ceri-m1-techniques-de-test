@@ -6,12 +6,12 @@ KHARCHOUF Mohamed - M1 ILSEN Classique Groupe 1
 Le projet ne contient qu’un package Java fr.univavignon.pokedex.api, sous le répertoire src/main.
 C'est un projet Maven, donc qui possède un fichier pom.xml.
 
-IPokemonMetadataProvider est chargé pour un index donné de retourner les métadonnées d’une espèce.
-IPokemonFactory permet de créer un individu.
-IPokedex est notre conteneur, qui étend les deux interfaces précédentes, qu’il fournit à travers le pattern "Décorateur".
-IPokedexFactory permet de créer une instance de IPokedex.
-Un IPokedex appartient à un PokemonTrainer, défini par un nom et une équipe.
-Les PokemonTrainer sont créés à travers l’interface IPokemonTrainerFactory.
+    IPokemonMetadataProvider est chargé pour un index donné de retourner les métadonnées d’une espèce.
+    IPokemonFactory permet de créer un individu.
+    IPokedex est notre conteneur, qui étend les deux interfaces précédentes, qu’il fournit à travers le pattern "Décorateur".
+    IPokedexFactory permet de créer une instance de IPokedex.
+    Un IPokedex appartient à un PokemonTrainer, défini par un nom et une équipe.
+    Les PokemonTrainer sont créés à travers l’interface IPokemonTrainerFactory.
 
 Voici la liste des test cases :
 
