@@ -16,5 +16,4 @@ public interface IPokemonTrainerFactory {
 	 * @return Created trainer instance.
 	 */
 	PokemonTrainer createTrainer(String name, Team team, IPokedexFactory pokedexFactory);
-	
 }
