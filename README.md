@@ -1,37 +1,40 @@
-# UCE Génie Logiciel Avancé : Techniques de tests
+[![codecov](https://codecov.io/gh/MohamedKharchouf/ceri-m1-techniques-de-test/branch/master/graph/badge.svg?token=VJMH58WB0M)](https://codecov.io/gh/MohamedKharchouf/ceri-m1-techniques-de-test)
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
 
-## Introduction
+KHARCHOUF Mohamed - M1 ILSEN Classique Groupe 1
 
-Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
-Pour cela nous allons réaliser un projet logiciel de petite taille, en suivant la roadmap suivante : 
-- Setup du projet
-- Mise en place des outils d’intégration continue
-- Écriture des tests unitaires
-- Écriture des mocks, et validation des tests
-- Développement dirigé par les tests
-- Documentation et conventions de style
-- Test d'une implémentation donnée
+Le projet ne contient qu’un package Java fr.univavignon.pokedex.api, sous le répertoire src/main.
+C'est un projet Maven, donc qui possède un fichier pom.xml.
 
-Le projet consiste à mettre en place un outil d’analyse statistique pour le jeu Pokémon GO.  
-Durant cette série de TPs, le gestionnaire de version Git sera utilisé à foison, à travers la plateforme GitHub. Si vous n’êtes pas à l’aise avec cet outil[^1], [voici](http://rogerdudler.github.io/git-guide/) un petit guide à garder sous la main.
+    IPokemonMetadataProvider est chargé pour un index donné de retourner les métadonnées d’une espèce.
+    IPokemonFactory permet de créer un individu.
+    IPokedex est notre conteneur, qui étend les deux interfaces précédentes, qu’il fournit à travers le pattern "Décorateur".
+    IPokedexFactory permet de créer une instance de IPokedex.
+    Un IPokedex appartient à un PokemonTrainer, défini par un nom et une équipe.
+    Les PokemonTrainer sont créés à travers l’interface IPokemonTrainerFactory.
 
-## Sujets
+Voici la liste des test cases :
 
-L'ensemble des sujets de TPs peut être trouvé dans le dossier `TPs`.
+IPokemonMetadataProviderTest
+IPokemonFactoryTest
+IPokedexFactoryTest
+IPokedexTest
+IPokemonTrainerFactoryTest
 
-Le dossier `src` contient la définition de l'ensemble des interfaces qui seront l'objet de vos travaux.
+L’idée est de stocker des informations sur des Pokémons, dans un conteneur qu’est le Pokédex. Dans le cadre de ce TP nous nous contenterons de la première génération, soit 151 espèces.
+Une espèce de Pokémon est décrite par des métadonnées communes à chaque individu de l’espèce à savoir :
 
-## Rendus
+    Un index numérique (allant de 0 à 150)
+    Un nom
+    Un niveau d’attaque
+    Un niveau de défense
+    Un niveau d’endurance ou stamina
+Ces informations sont représentées par la classe PokemonMetadata. Les métadonnées décrivent une espèce, alors qu’un individu est défini par la classe Pokemon, défini par les attributs suivants :
 
-Le rendu des TPs se fait au rythme suivant :
-
-- TP1 : 1ère séance
-- TP2 : 2ème séance
-- TP3 : 3ème séance
-- TP4 : 5ème séance
-- TP5 : dernière séance
-- TP6 : dernière séance
-
-Pour chaque rendu, le projet dans son intégralité doit être déposé sur la plateforme.
-
-[^1]: Si vous n’êtes vraiment pas à l’aise avec cet outil nous vous conseillons quand même vivement de vous y mettre.
+    Un niveau de combat ou CP
+    Un niveau de vie ou HP
+    Un niveau de poussière d’étoile ou dust
+    Un nombre de bonbon ou candy
+    Un pourcentage de perfection
+    Des métadonnées
+    Les métadonnées d’un individu ne doivent pas être confondues avec les métadonnées de l’espèce. 
