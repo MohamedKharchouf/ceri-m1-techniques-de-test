@@ -51,7 +51,7 @@ jobs:
           name: Build-docs
           command: javadoc src/main/java/fr/univavignon/pokedex/api/* -d docs
       - persist_to_workspace:
-          root: target/site/
+          root: .
           paths: docs
   docs-deploy:
     docker:
