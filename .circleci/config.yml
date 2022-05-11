@@ -37,7 +37,7 @@ jobs:
               command: mvn -B -DskipTests javadoc:javadoc
 
           - persist_to_workspace:
-              root: .
+              root: output/site/
               paths: docs
 
   docs-deploy:
