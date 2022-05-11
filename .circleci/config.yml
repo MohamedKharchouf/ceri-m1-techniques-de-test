@@ -55,7 +55,7 @@ jobs:
           command: |
             npm install -g --silent gh-pages@2.0.1
             git config user.email "mohamed.kharchouf@alumni.univ-avignon.fr"
-            git config user.name "MohamedKharchouf"
+            git config user.name "MohamedKharchouf" 
       - run:
           name: Deploy docs to gh-pages branch
           command: gh-pages --dist docs/apidocs/
