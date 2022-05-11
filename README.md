@@ -41,3 +41,6 @@ Ces informations sont représentées par la classe PokemonMetadata. Les métadon
     Les métadonnées d’un individu ne doivent pas être confondues avec les métadonnées de l’espèce. 
     
 Lien [Javadoc](https://mohamedkharchouf.github.io/ceri-m1-techniques-de-test/fr/univavignon/pokedex/api/package-summary.html)
+
+[![Scaladoc](https://javadoc-badge.appspot.com/com.github.nscala-time/nscala-time_2.11.svg?label=scaladoc)](https://javadoc-badge.appspot.com/com.github.nscala-time/nscala-time_2.11)
+
