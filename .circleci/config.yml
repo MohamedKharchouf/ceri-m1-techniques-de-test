@@ -31,14 +31,7 @@ jobs:
           - run:
               name: Code Coverage
               command: curl -Os https://uploader.codecov.io/latest/linux/codecov; chmod +x codecov; ./codecov
-
-
-steps:
-  - run:
-      name: test
-      command: test
-
-docs:
+  docs:
     docker:
       - image: cimg/base:2021.04
     steps:
@@ -60,8 +53,7 @@ docs:
       - persist_to_workspace:
           root: .
           paths: docs
-
-docs-deploy:
+  docs-deploy:
     docker:
       - image: node:8.10.0
     steps:
@@ -82,6 +74,18 @@ docs-deploy:
           name: Deploy docs to gh-pages branch
           command: gh-pages --dist docs
 
+          
+  
+
+
+steps:
+  - run:
+      name: test
+      command: test
+
+
+
+
 workflows:
   maven_test:
     jobs:
@@ -90,5 +94,7 @@ workflows:
   codecovupload:
     jobs:
       - build-and-test
+
+      
       
  
