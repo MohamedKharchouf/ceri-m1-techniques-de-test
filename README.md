@@ -39,3 +39,5 @@ Ces informations sont représentées par la classe PokemonMetadata. Les métadon
     Un pourcentage de perfection
     Des métadonnées
     Les métadonnées d’un individu ne doivent pas être confondues avec les métadonnées de l’espèce. 
+    
+Lien [Javadoc](https://mohamedkharchouf.github.io/ceri-m1-techniques-de-test/fr/univavignon/pokedex/api/package-summary.html)
