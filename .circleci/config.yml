@@ -31,6 +31,15 @@ jobs:
           - run:
               name: Code Coverage
               command: curl -Os https://uploader.codecov.io/latest/linux/codecov; chmod +x codecov; ./codecov
+
+          - run:
+              name: Generate javadoc
+              command: mvn -B -DskipTests javadoc:javadoc
+
+          - persist_to_workspace:
+              root: output/site/
+              paths: apidocs
+
   docs-deploy:
     docker:
       - image: node:8.10.0
