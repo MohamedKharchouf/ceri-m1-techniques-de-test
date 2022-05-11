@@ -49,7 +49,7 @@ jobs:
           command: sudo apt-get install openjdk-11-jdk-headless -y
       - run:
           name: Build-docs
-          command: javadoc src/main/java/fr/univavignon/pokedex/api/ -d docs
+          command: javadoc src/main/java/fr/univavignon/pokedex/api/* -d docs
       - persist_to_workspace:
           root: target/site/
           paths: apidocs
@@ -65,8 +65,8 @@ jobs:
           name: Install and configure dependencies
           command: |
             npm install -g --silent gh-pages@2.0.1
-            git config user.email "ci-build@klukas.net"
-            git config user.name "ci-build"
+            git config user.email "mohamed.kharchouf@alumni.univ-avignon.fr"
+            git config user.name "MohamedKharchouf"
       - add_ssh_keys:
           fingerprints:
             - "9b:88:44:5f:06:69:48:53:b9:6f:9b:b0:08:de:11:f6"
