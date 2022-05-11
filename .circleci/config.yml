@@ -70,7 +70,7 @@ jobs:
             git config user.name "MohamedKharchouf"
       - add_ssh_keys:
           fingerprints:
-            - "9b:88:44:5f:06:69:48:53:b9:6f:9b:b0:08:de:11:f6"
+            - "75:94:52:7e:a1:94:eb:f6:53:1d:47:e0:7c:ea:dc:e3"
       - run:
           name: Deploy docs to gh-pages branch
           command: gh-pages --dist docs
