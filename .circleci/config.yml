@@ -38,7 +38,7 @@ jobs:
 
           - persist_to_workspace:
               root: .
-              paths: .
+              paths: docs
 
   docs-deploy:
     docker:
@@ -58,7 +58,7 @@ jobs:
             git config user.name "MohamedKharchouf"
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist docs/apidocs/
+          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist docs
 
           
   
