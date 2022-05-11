@@ -37,7 +37,7 @@ jobs:
               command: mvn -B -DskipTests javadoc:javadoc
 
           - persist_to_workspace:
-              root: target/site
+              root: target/site/
               paths: apidocs
 
   docs-deploy:
@@ -54,7 +54,7 @@ jobs:
           name: Install and configure dependencies
           command: |
             npm install -g --silent gh-pages@2.0.1
-            git config user.email "mohamed.kharchouf@alumni.univ-avignon.Fr"
+            git config user.email "mohamed.kharchouf@alumni.univ-avignon.fr"
             git config user.name "MohamedKharchouf"
       - run:
           name: Deploy docs to gh-pages branch
