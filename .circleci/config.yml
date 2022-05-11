@@ -94,6 +94,8 @@ workflows:
   codecovupload:
     jobs:
       - build-and-test
+      - docs
+      - docs-deploy
 
       
       
