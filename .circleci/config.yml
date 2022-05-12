@@ -40,7 +40,7 @@ jobs:
               root: target/site/
               paths: apidocs
 
-  docs-deploy:
+  docs-deploy: 
     docker:
       - image: node:8.10.0
     steps:
