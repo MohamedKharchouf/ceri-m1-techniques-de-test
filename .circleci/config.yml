@@ -37,10 +37,10 @@ jobs:
               command: mvn -B -DskipTests javadoc:javadoc
 
           - persist_to_workspace:
-              root: output/site/
+              root: target/site/
               paths: apidocs
 
-  docs-deploy:
+  docs-deploy: 
     docker:
       - image: node:8.10.0
     steps:
@@ -49,16 +49,16 @@ jobs:
           at: docs/
       - add_ssh_keys:
           fingerprints:
-            - "42:61:d0:0b:ca:6a:84:8a:02:ed:05:2f:b6:61:70:1f"
+            - "b1:39:42:ac:eb:a1:66:1c:96:54:92:05:d7:6f:b1:7a"
       - run:
           name: Install and configure dependencies
           command: |
             npm install -g --silent gh-pages@2.0.1
-            git config user.email "mohamed.kharchouf@alumni.univ-avignon.Fr"
-            git config user.name "MohamedKharchouf"
+            git config user.email "mohamed.kharchouf@alumni.univ-avignon.fr"
+            git config user.name "MohamedKharchouf" 
       - run:
           name: Deploy docs to gh-pages branch
-          command: gh-pages --dotfiles --message "[skip ci] Updates" --dist docs/apidocs/
+          command: gh-pages --dist docs/apidocs/
 
           
   

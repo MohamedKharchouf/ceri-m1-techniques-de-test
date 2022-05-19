@@ -2,6 +2,9 @@
 [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
 ![Checkstyle](target/site/badges/checkstyle-result.svg)
 
+[![javadoc](https://javadoc.io/badge2/org.springframework/spring-core/javadoc.svg)](https://mohamedkharchouf.github.io/ceri-m1-techniques-de-test/fr/univavignon/pokedex/api/package-summary.html)
+
+
 KHARCHOUF Mohamed - M1 ILSEN Classique Groupe 1
 
 Le projet ne contient qu’un package Java fr.univavignon.pokedex.api, sous le répertoire src/main.
@@ -39,3 +42,5 @@ Ces informations sont représentées par la classe PokemonMetadata. Les métadon
     Un pourcentage de perfection
     Des métadonnées
     Les métadonnées d’un individu ne doivent pas être confondues avec les métadonnées de l’espèce. 
+    
+Lien [Javadoc](https://mohamedkharchouf.github.io/ceri-m1-techniques-de-test/fr/univavignon/pokedex/api/package-summary.html)
