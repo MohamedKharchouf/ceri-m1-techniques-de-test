@@ -1,0 +1,15 @@
+Pour le TP6.
+La classe RocketPokemonFactoryTest a été crée permettant de tester les méthodes d'implémentation de la classe RocketPokemonFactory.
+Après avoir créer une méthode rocketCreatePokemonTest() permettant de tester donc la fonction en question, plusieurs choses sont à notées.
+
+On notera que RocketPokemonFactory ne passe pas les tests. 
+
+Tout dabord, On peut remarquer une erreur lorsu'on teste la méthode "getIv()". En effet lorsque l'on passe en parametre un iv pour un pokemon, 
+celui-ci n'est pas pris en compte lors de la création. 
+Cela s'explique par le fait que la méthode de l'implémentation inscrit en brut "1" pour l'iv, et ne prend pas en compte l'iv que l'on lui passe en paramètre.
+
+Une autre chose est l'excpetion, celle-ci n'est pas prise en compte dans l'implémentation de la team Rocket. Un pokemon ne peut avoir un index inferieur à 0 
+ou supérieur à 150, cependant avec la méthode createPokemon de la nouvelle implémentation, aucune exception n'est lancée lorsque l'on entre un index inférieur à 0 ou 
+supérieur à 150.
+
+Pour finir, on peut également que l'implémentation fournit par la team Rocket rajoute des erreurs de checkstyle.
