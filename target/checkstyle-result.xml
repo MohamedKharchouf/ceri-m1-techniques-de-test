@@ -88,6 +88,8 @@
 <error line="61" column="42" severity="error" message="Le paramètre order devrait être final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="63" severity="error" message="La ligne excède 80 caractères (trouvé 84)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
+<file name="C:\Users\moham\TDT\TP1\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokedexException.java">
+</file>
 <file name="C:\Users\moham\TDT\TP1\ceri-m1-techniques-de-test\src\main\java\fr\univavignon\pokedex\api\PokedexFactory.java">
 <error line="3" column="55" severity="error" message="Il manque une espace avant &apos;{&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 <error line="5" column="1" severity="error" message="Le fichier contient des caractères de tabulation (ce n&apos;est que la première occurence)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
